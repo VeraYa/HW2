@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+main {
+  position: relative;
+  display: none;
+}
+
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+#loader::before {
+  content: "";
+  width: 50px;
+  height: 50px;
+  border: 5px solid #003CFF;
+  border-top: 5px solid #fff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.slider {
+  max-width: 1300px;
+  overflow: hidden;
+}
+.slider__wrapper {
+  display: flex;
+  padding: 5px 0;
+}
+.slider__content {
+  display: flex;
+  gap: 80px;
+  transition: transform 0.4s ease;
+}
+.slider__button {
+  position: absolute;
+  bottom: calc(50% - 350px);
+  color: white;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+.slider__icon {
+  fill: white;
+  transition: fill 0.3s;
+}
+.slider__button svg path {
+  transition: stroke 0.3s;
+}
+.slider__button:hover svg {
+  fill: #0056b3;
+}
+.slider__button:hover svg path {
+  stroke: white;
+}
+.slider__button:disabled {
+  cursor: not-allowed;
+}
+.slider__button:disabled svg {
+  fill: #ccc;
+}
+.slider__button:disabled svg path {
+  stroke: #222222;
+}
+.slider__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  width: 320px;
+  padding: 16px;
+  flex-shrink: 0;
+}
+.slider__img {
+  width: 100%;
+  margin-bottom: auto;
+  border-radius: 12px;
+}
+.slider__card h3 {
+  font-size: 18px;
+  margin: 12px 0 6px;
+  text-align: center;
+}
+.slider__card p {
+  font-size: 14px;
+  color: #555;
+  text-align: center;
+}
+
+.prev-btn {
+  right: 7%;
+}
+
+.next-btn {
+  right: 0;
+  transform: rotate(180deg);
+}/*# sourceMappingURL=styles.css.map */
