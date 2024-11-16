@@ -51,7 +51,7 @@ main {
 
     &__wrapper {
         display: flex;
-        padding: 5px 0;
+        padding: 12px 6px;
     }
 
     &__content {
@@ -62,7 +62,7 @@ main {
 
     &__button {
         position: absolute;
-        bottom: calc(50% - 350px);
+        bottom: calc(50% - 370px);
         color: white;
         border: none;
         cursor: pointer;
@@ -112,8 +112,10 @@ main {
 
     &__img {
         width: 100%;
-        margin-bottom: auto;
+        height: 200px;
+        margin-bottom: 20px;
         border-radius: 12px;
+        object-fit: contain;
     }
 
     &__card h3 {

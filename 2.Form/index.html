@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма проверки пароля</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Contact Information</h2>
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="fio">FIO *</label>
+                <input class="form-group__input" type="text" id="fio" name="fio" pattern="^[A-Z][a-z]+\s[A-Z][a-z]+\s[A-Z][a-z]+$" placeholder="For Example Doe" required>
+                <div class="feedback" id="fioFeedback"></div>
+            </div>
+            <div class="form-group">
+                <label for="password">Your password *</label>
+                <input class="form-group__input" type="password" id="password" name="password" placeholder="Enter the password" required>
+                <div class="feedback" id="passwordFeedback"></div>
+            </div>
+            <button type="submit" class="btn">Continue</button>
+        </form>
+    </div>
+</body>
+</html>

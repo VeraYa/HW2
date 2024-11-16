@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+#searchInput {
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 300px;
+    font-size: 16px;
+}
+
+#itemList {
+    list-style-type: none;
+    padding: 0;
+    width: 320px;
+}
+
+#itemList li {
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-top: -1px;
+    cursor: pointer;
+}

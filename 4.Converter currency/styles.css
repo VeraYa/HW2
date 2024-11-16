@@ -1,0 +1,60 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.currency {
+  background: linear-gradient(0deg, rgba(244, 244, 244, 0.9), rgba(244, 244, 244, 0.9)), linear-gradient(358.2deg, rgba(178, 178, 178, 0.8) 8.06%, rgba(178, 178, 178, 0) 67.93%);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  width: 90%;
+  max-width: 500px;
+}
+.currency__container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.currency__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 10px 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.currency__header {
+  text-align: left;
+  margin-bottom: 20px;
+}
+.currency__header h1 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0;
+}
+.currency__header span {
+  font-size: 0.9em;
+  color: #777;
+}
+
+.currency__row h2 {
+  font-size: 1em;
+  margin: 0;
+  color: #333;
+}
+
+.currency__row p {
+  font-size: 1em;
+  margin: 0;
+  color: #000;
+}/*# sourceMappingURL=styles.css.map */
