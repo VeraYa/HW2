@@ -1,18 +1,16 @@
-async function fetchImages() {
+ const fetchImages = async () => {
     try {
         // заменила api потому что api из задания не корректно работает и плохо подгружает картинки
         // куратор сказал, что я могу заменить на этот
-        const response = await axios.get('https://fakestoreapi.com/products ');
-        console.log(response.data)
+        const response = await axios.get('https://fakestoreapi.com/products');
         return response.data.slice(0, 10);
-
     } catch (error) {
         console.error("Ошибка при получении изображений:", error);
         return [];
     }
 }
 
-async function initSlider() {
+const initSlider = async () => {
     const loader = document.getElementById('loader');
     const mainContent = document.querySelector('main');
     loader.style.display = 'flex';
@@ -48,7 +46,7 @@ async function initSlider() {
             sliderContent.appendChild(card);
         });
 
-        function updateSliderPosition() {
+        const updateSliderPosition = () => {
             const offset = -currentIndex * 400;
             sliderContent.style.transform = `translateX(${offset}px)`;
 
@@ -83,7 +81,7 @@ async function initSlider() {
             handleSwipeGesture();
         });
 
-        function handleSwipeGesture() {
+        const handleSwipeGesture = () => {
             if (touchEndX < touchStartX && currentIndex < images.length - 1) {
                 currentIndex++;
                 updateSliderPosition();
@@ -106,4 +104,4 @@ async function initSlider() {
     }
 }
 
-window.addEventListener('DOMContentLoaded', initSlider);
+initSlider()

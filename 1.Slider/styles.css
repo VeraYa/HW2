@@ -127,5 +127,5 @@ main {
 
 .next-btn {
   right: 0;
-  transform: rotate(180deg);
+  transform: rotate(180deg) translateY(5px);
 }/*# sourceMappingURL=styles.css.map */
